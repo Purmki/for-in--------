@@ -92,15 +92,26 @@
 // }
 
 
-// const pictureArray=[
-    
-// ]
+const companyData = [
+        { companyName: "ABC Inc.", city: "New York", cityImage: "https://static.dezeen.com/uploads/2021/09/bjarke-ingels-telosa-city-marc-lore_dezeen_2364_sq_2-150x150.jpg" },
+        { companyName: "XYZ Corp.", city: "Los Angeles", cityImage: "https://y6b8k9e7.stackpathcdn.com/wp-content/uploads/smart-cities-150x150.jpg" },
+        { companyName: "Tech Solutions Ltd.", city: "San Francisco", cityImage: "https://www.verdict.co.uk/wp-content/uploads/2020/02/History-of-smart-cities-150x150.jpg" },
+        { companyName: "Global Innovations LLC", city: "Chicago", cityImage: "https://www.verdict.co.uk/wp-content/uploads/2020/02/History-of-smart-cities-150x150.jpg" },
+        { companyName: "Mega Enterprises", city: "Miami", cityImage: "https://www.verdict.co.uk/wp-content/uploads/2020/02/History-of-smart-cities-150x150.jpg" }
+    ];
 
-// const pictures = [
-//     "https://rhubarbandwren.co.uk/wp-content/uploads/2020/01/my-neighbor-totoro_sleeping-300x300.jpg"
+    function printToScreen(){
+    for(const key of companyData){
+        myDiv.innerHTML+=`${key.companyName}<br>`
+        myDiv.innerHTML+=`${key.city}<br>`
+        myDiv.innerHTML+=`<img class="myPics" src="${key.cityImage}" alt=""><br>`
+        
+    }
+    myDiv.style.display='flex'
+    myDiv.style.flexWrap = "wrap";
+}
+ printToScreen()
 
-//   ];
-// document.innerHTML=`${pictures}`
 
 
 
@@ -165,18 +176,25 @@
 
 
 //5
-const object={
-        firstObject: task51.value,
-        secondObject: task52.value,
-        thirdObject: task53.value,
-        fourthObject: task54.value,
-}
+//פונקציה שמקבלת אלמנט כאינפוט ומדפיסה למסך
+// const myBtn = document.getElementById("myBtn");
+//         const task51 = document.getElementById("task51");
+//         const task52 = document.getElementById("task52");
+//         const task53 = document.getElementById("task53");
+//         const task54 = document.getElementById("task54");
+//         const myH1 = document.getElementById("myH1");
+        
+// myBtn.addEventListener("click", printToScreen)
 
-myBtn.addEventListener("click", printToScreen)
-
-function printToScreen(){
-        for (const key in object) {
-            myH1.innerHTML+=`${object[key]}<br>`;
-            }
-        }
+// function printToScreen(){
+//         const taskObject={
+//                 firstObject: task51.value,
+//                 secondObject: task52.value,
+//                 thirdObject: task53.value,
+//                 fourthObject: task54.value,
+//         }
+//         for (const key in taskObject) {
+//             myH1.innerHTML+=`${taskObject[key]}<br>`;
+//             }
+//         }
        
